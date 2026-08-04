@@ -76,6 +76,27 @@ The confusion matrix demonstrated balanced performance in identifying declining 
 
 Feature importance analysis identified **Impressions (90 days)**, **Average Position**, **Content Age**, and **Word Count** as the strongest predictors of declining content.
 
+## Feature Importance
+
+The Random Forest model identified the most influential features used to predict declining content. Impressions over the last 90 days, average search position, content age, and word count had the highest impact on model predictions.
+
+![Feature Importance](images/feature_importance.png)
+
+## Confusion Matrix
+
+The confusion matrix summarizes the classification performance of the Random Forest model. The model correctly identified most declining and non-declining pages while maintaining balanced precision and recall.
+
+![Confusion Matrix](images/confusion_matrix.png)
+
+## Baseline vs Machine Learning
+
+| Method | Description |
+|---------|-------------|
+| Rule-based Baseline | Uses manually designed refresh scores based on visibility, freshness, position, and content depth. |
+| Random Forest | Learns patterns automatically from historical search performance data and predicts declining content. |
+
+The Random Forest model provides a more flexible and data-driven approach compared to the manually designed baseline scoring system.
+
 # Ranked Recommendations
 
 The trained model generated a ranked list of pages based on their predicted probability of decline.
@@ -93,7 +114,9 @@ The recommendation system combines machine learning predictions with baseline bu
 
 # Conclusion
 
-This project demonstrates how machine learning can support content refresh prioritization using search performance data.
+This project demonstrates how machine learning can support content refresh prioritization using search performance data. 
+
+A Random Forest classifier combined with a rule-based baseline successfully prioritized pages requiring refresh.
 
 A rule-based baseline scoring system and a Random Forest classifier were developed to identify pages that are likely to decline in performance.
 
@@ -108,3 +131,12 @@ Built on the **FlyRank Machine Learning Internship Dataset**.
 Data Credit: https://flyrank.ai
 
 This project was completed as part of the FlyRank Machine Learning Internship.
+
+# References
+
+1. FlyRank Machine Learning Internship Dataset
+
+2. https://flyrank.ai
+
+3. Scikit-learn Documentation
+https://scikit-learn.org
