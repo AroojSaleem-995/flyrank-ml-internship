@@ -63,7 +63,7 @@ The baseline scoring system served as a reference, while the machine learning mo
 
 # Results
 
-The Random Forest classifier achieved the following performance:
+The Random Forest classifier was evaluated on the test dataset using standard classification metrics.
 
 | Metric | Value |
 |--------|--------|
@@ -72,30 +72,39 @@ The Random Forest classifier achieved the following performance:
 | Recall | 74.94% |
 | F1-Score | 72.62% |
 
-The confusion matrix demonstrated balanced performance in identifying declining and non-declining pages.
-
-Feature importance analysis identified **Impressions (90 days)**, **Average Position**, **Content Age**, and **Word Count** as the strongest predictors of declining content.
+The model achieved balanced performance in identifying both declining and non-declining pages. The F1-score of **72.62%** indicates that the model provides reliable predictions for prioritizing pages that may require content refresh.
 
 ## Feature Importance
 
-The Random Forest model identified the most influential features used to predict declining content. Impressions over the last 90 days, average search position, content age, and word count had the highest impact on model predictions.
+The feature importance analysis shows which variables contributed the most to the model's predictions.
 
-![Feature Importance](images/feature_importance.png)
+![Feature Importance](images/feature_importance.PNG)
+
+The most influential features were:
+
+- Impressions (90 days)
+- Average Position
+- Content Age
+- Word Count
+
+These results suggest that search visibility, ranking position, and content freshness are the strongest indicators of pages that may benefit from a content refresh.
 
 ## Confusion Matrix
 
-The confusion matrix summarizes the classification performance of the Random Forest model. The model correctly identified most declining and non-declining pages while maintaining balanced precision and recall.
+The confusion matrix summarizes the classification performance of the Random Forest model.
 
-![Confusion Matrix](images/confusion_matrix.png)
+![Confusion Matrix](images/confusion_matrix.PNG)
+
+The model correctly classified most declining and non-declining pages while maintaining a good balance between precision and recall. Although some misclassifications occurred, the overall performance demonstrates that the model can effectively identify pages that are likely to decline.
 
 ## Baseline vs Machine Learning
 
 | Method | Description |
 |---------|-------------|
-| Rule-based Baseline | Uses manually designed refresh scores based on visibility, freshness, position, and content depth. |
-| Random Forest | Learns patterns automatically from historical search performance data and predicts declining content. |
+| Rule-based Baseline | Uses manually designed refresh scores based on visibility, freshness, ranking position, and content depth. |
+| Random Forest | Learns patterns automatically from historical search performance data to predict declining content. |
 
-The Random Forest model provides a more flexible and data-driven approach compared to the manually designed baseline scoring system.
+The baseline approach relies on predefined business rules, whereas the Random Forest model learns complex relationships directly from the data. As a result, the machine learning approach provides a more flexible and scalable solution for identifying content refresh opportunities.
 
 # Ranked Recommendations
 
