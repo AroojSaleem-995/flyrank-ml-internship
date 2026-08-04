@@ -110,7 +110,7 @@ The baseline approach relies on predefined business rules, whereas the Random Fo
 
 The trained model generated a ranked list of pages based on their predicted probability of decline.
 
-Pages with higher scores should be prioritized for review and content refresh.
+High-priority pages should be reviewed first for content updates, keyword optimization, metadata improvements, and content expansion. Lower-priority pages can be monitored and refreshed periodically based on future performance trends.
 
 The recommendation system combines machine learning predictions with baseline business rules to support informed content optimization decisions.
 
@@ -123,15 +123,13 @@ The recommendation system combines machine learning predictions with baseline bu
 
 # Conclusion
 
-This project demonstrates how machine learning can support content refresh prioritization using search performance data. 
+This project demonstrates how machine learning can support content refresh prioritization using search performance data.
 
-A Random Forest classifier combined with a rule-based baseline successfully prioritized pages requiring refresh.
+A rule-based baseline and a Random Forest classifier were developed to identify pages likely to decline in performance.
 
-A rule-based baseline scoring system and a Random Forest classifier were developed to identify pages that are likely to decline in performance.
+The results indicate that search visibility, ranking position, and content freshness are valuable indicators for prioritizing content updates.
 
-The results indicate that search visibility, content freshness, and engagement metrics are valuable indicators for prioritizing content updates.
-
-The proposed approach provides a practical and data-driven framework for improving content maintenance strategies.
+The proposed approach provides a practical and scalable framework for supporting data-driven content maintenance decisions.
 
 # Acknowledgments
 
@@ -144,8 +142,7 @@ This project was completed as part of the FlyRank Machine Learning Internship.
 # References
 
 1. FlyRank Machine Learning Internship Dataset
+   https://flyrank.ai
 
-2. https://flyrank.ai
-
-3. Scikit-learn Documentation
-https://scikit-learn.org
+2. Scikit-learn Documentation
+   https://scikit-learn.org
